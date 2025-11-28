@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <!-- Main Page -->
+    <url>
+        <loc>https://grarpeter.co.il/</loc>
+        <lastmod>2025-11-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        
+        <!-- Image sitemap entries -->
+        <image:image>
+            <image:loc>https://grarpeter.co.il/images/seat.jpeg</image:loc>
+            <image:title>רכב סיאט - גרר פיטר</image:title>
+            <image:caption>תמונה של רכב סיאט בגלריית גרר פיטר - שירותי גרירה מקצועיים</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://grarpeter.co.il/images/yacht.jpeg</image:loc>
+            <image:title>יאכטה יוקרתית - גרר פיטר</image:title>
+            <image:caption>תמונה של יאכטה יוקרתית בגלריית גרר פיטר - שירותי גרירה ימית</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://grarpeter.co.il/images/ford.jpeg</image:loc>
+            <image:title>רכב פורד - גרר פיטר</image:title>
+            <image:caption>תמונה של רכב פורד בגלריית גרר פיטר - גרירת רכבים אמריקאיים</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://grarpeter.co.il/images/tesla.jpeg</image:loc>
+            <image:title>רכב טסלה חשמלי - גרר פיטר</image:title>
+            <image:caption>תמונה של רכב טסלה חשמלי בגלריית גרר פיטר - גרירת רכבים חשמליים</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://grarpeter.co.il/images/mitsu.jpeg</image:loc>
+            <image:title>רכב מיצובישי - גרר פיטר</image:title>
+            <image:caption>תמונה של רכב מיצובישי בגלריית גרר פיטר - גרירת רכבים יפניים</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Gallery Page -->
+    <url>
+        <loc>https://grarpeter.co.il/gallery.html</loc>
+        <lastmod>2025-11-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Articles Page -->
+    <url>
+        <loc>https://grarpeter.co.il/articles.html</loc>
+        <lastmod>2025-11-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset> 

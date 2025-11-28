@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Allow: /gallery.html
+Allow: /articles.html
+Allow: /images/
+
+# Sitemap location
+Sitemap: https://grarpeter.co.il/sitemap.xml
+
+# Crawl delay for better server performance
+Crawl-delay: 1 

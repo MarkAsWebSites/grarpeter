@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>גלריית תמונות - גרר פיטר | מכוניות ויאכטות</title>
+    <meta name="description" content="גלריית תמונות של גרר פיטר - מציגה אוסף מרשים של רכבים, יאכטות ומכוניות יוקרה. צפו בתמונות איכותיות ומקצועיות.">
+    <meta name="keywords" content="גרר פיטר, גלריה, מכוניות, יאכטות, רכבים, תמונות, ישראל">
+    <meta name="author" content="גרר פיטר">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="גלריית תמונות - גרר פיטר">
+    <meta property="og:description" content="גלריית תמונות מרשימה של רכבים ויאכטות">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="he_IL">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com/gallery.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="logo_no_bg.png">
+    
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Structured Data for Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "name": "גלריית גרר פיטר",
+        "description": "גלריית תמונות של רכבים ויאכטות",
+        "author": {
+            "@type": "Person",
+            "name": "גרר פיטר"
+        },
+        "url": "https://yourdomain.com/gallery.html"
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Heebo', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Modern Navbar - matching main page */
+        .modern-navbar {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50 !important;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-nav .nav-link {
+            color: #2c3e50 !important;
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #667eea !important;
+            transform: translateY(-2px);
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #667eea !important;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            right: 50%;
+            background: #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 100%;
+            right: 0;
+        }
+
+        .logo {
+            height: 70px;
+            width: auto;
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        /* Header Styles */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 40px 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            text-align: center;
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            font-weight: 300;
+        }
+
+        /* Main Gallery Section */
+        .gallery-section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 50px;
+            font-weight: 500;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: white;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+            display: block;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* No overlay text - clean image focus */
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(transparent 70%, rgba(0, 0, 0, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+
+        /* Loading Animation */
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid white;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Lightbox for full image view */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            z-index: 2001;
+        }
+
+        .lightbox-close:hover {
+            opacity: 0.7;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .footer-link {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .footer-link:hover {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media only screen and (max-width: 768px) {
+            .main-title {
+                font-size: 2rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+                padding: 10px;
+            }
+            
+            .gallery-item img {
+                height: 200px;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .navbar-nav {
+                text-align: center;
+            }
+
+            .navbar-nav .nav-link {
+                margin: 5px 0;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Animation for page load */
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Loading screen */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid white;
+            animation: spin 1s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-overlay" id="loadingScreen">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light modern-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">גרר פיטר</a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">בית</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">גלריה</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#services">שירותים</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">צור קשר</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <img src="logo_no_bg.png" alt="גרר פיטר לוגו" class="logo">
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="main-title">גלריית גרר פיטר</h1>
+                <p class="subtitle">אוסף תמונות של רכבים ויאכטות מהפרויקטים שלנו</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Gallery Section -->
+    <main class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">הגלריה שלנו</h2>
+            
+            <!-- Loading Animation -->
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>טוען תמונות...</p>
+            </div>
+            
+            <!-- Gallery Container -->
+            <div id="imageGallery" class="gallery-grid fade-in" style="display: none;">
+                <!-- Images will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox for full image view -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="index.html" class="footer-link">
+                    <i class="fas fa-home"></i> בית
+                </a>
+                <a href="index.html#services" class="footer-link">
+                    <i class="fas fa-tools"></i> שירותים
+                </a>
+                <a href="tel:+972507525133" class="footer-link">
+                    <i class="fas fa-phone"></i> צור קשר
+                </a>
+            </div>
+            <p>&copy; 2024 גרר פיטר. כל הזכויות שמורות.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Enhanced JavaScript -->
+    <script src="getImages.js"></script>
+
+    <script>
+        // Hide loading screen when page loads
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        });
+
+        // Enhanced smooth scrolling and navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle anchor links for same-page navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    
+                    // Special handling for home link - scroll to top
+                    if (targetId === 'home' || targetId === '') {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                        return;
+                    }
+                    
+                    // Handle other anchor links within the page
+                    const target = document.getElementById(targetId);
+                    if (target) {
+                        const navbarHeight = document.querySelector('.modern-navbar').offsetHeight;
+                        const targetPosition = target.offsetTop - navbarHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Handle external navigation links (to other pages)
+            document.querySelectorAll('a[href*="index.html"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
+                    // If it's a link with an anchor to another page, let it navigate normally
+                    if (href.includes('#')) {
+                        // Let the browser handle navigation to another page with anchor
+                        return true;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
