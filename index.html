@@ -723,7 +723,7 @@
             border-top: 4px solid white;
             animation: spin 1s linear infinite;
         }
-
+		
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
@@ -731,27 +731,34 @@
     </style>
 
     <!-- Google Analytics with Phone Call Tracking -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PBP3G0KNMS"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-PBP3G0KNMS');
+<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PBP3G0KNMS"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
 
-        // Simple phone call tracking - just send to Google
-        function trackPhoneClick(source) {
-            // Google Analytics event tracking
-            gtag('event', 'phone_call', {
-                'event_category': 'contact',
-                'event_label': source
-            });
-            
-            // Google Ads conversion tracking
-            gtag('event', 'conversion', {
-                'send_to': 'G-PBP3G0KNMS/phone_conversion'
-            });
-        }
-    </script>
+	  gtag('config', 'G-PBP3G0KNMS');
+	</script>
+
+<!-- Event snippet for Click to call (4) conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-655837764/S3LOCJe-odEbEMSU3bgC',
+      'value': 1.0,
+      'currency': 'ILS',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 </head>
 <body>
     <!-- Loading Screen -->
@@ -767,7 +774,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+		
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
