@@ -1,0 +1,107 @@
+/* ============================================
+   WHATSAPP FLOATING BUTTON WIDGET
+   ============================================ */
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    left: 40px;
+    background-color: #25d366;
+    color: #ffffff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    animation: whatsapp-pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-float:focus {
+    outline: 3px solid #128c7e;
+    outline-offset: 3px;
+}
+
+.whatsapp-float:active,
+.whatsapp-float:visited {
+    color: #ffffff;
+    background-color: #25d366;
+}
+
+.whatsapp-float:active {
+    transform: scale(0.95);
+}
+
+.whatsapp-float i {
+    font-size: 32px;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Font Awesome 6 Brands" !important;
+    font-weight: 400 !important;
+    color: inherit !important;
+}
+
+/* Ensure Font Awesome icon doesn't break on visited/active states */
+.whatsapp-float:visited i,
+.whatsapp-float:active i,
+.whatsapp-float:hover i,
+.whatsapp-float:focus i {
+    font-family: "Font Awesome 6 Brands" !important;
+    font-weight: 400 !important;
+    color: inherit !important;
+    display: inline-block !important;
+}
+
+@keyframes whatsapp-pulse {
+    0% {
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.6);
+    }
+    100% {
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    }
+}
+
+/* RTL support */
+[dir="rtl"] .whatsapp-float {
+    left: auto;
+    right: 40px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 56px;
+        height: 56px;
+        bottom: 20px;
+        left: 20px;
+        font-size: 28px;
+    }
+    
+    [dir="rtl"] .whatsapp-float {
+        left: auto;
+        right: 20px;
+    }
+    
+    .whatsapp-float i {
+        font-size: 28px;
+    }
+}
